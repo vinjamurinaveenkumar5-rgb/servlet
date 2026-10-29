@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecureBank - Register</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #07111f,
+                    #102a43,
+                    #0b1728
+                );
+
+            color: white;
+        }
+
+        .container {
+            width: 920px;
+            min-height: 600px;
+
+            display: flex;
+
+            border-radius: 25px;
+            overflow: hidden;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.5);
+
+            backdrop-filter: blur(15px);
+        }
+
+        /* LEFT SIDE */
+
+        .left {
+            width: 45%;
+
+            padding: 60px 45px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0f4c81,
+                    #071b2e
+                );
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+
+            margin-bottom: 25px;
+        }
+
+        .logo span {
+            color: #4fd1c5;
+        }
+
+        .left h1 {
+            font-size: 40px;
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+        }
+
+        .left p {
+            color: #c8d5e2;
+
+            line-height: 1.7;
+
+            font-size: 16px;
+        }
+
+        .benefits {
+            margin-top: 35px;
+        }
+
+        .benefits div {
+            margin: 15px 0;
+
+            color: #dce8f2;
+        }
+
+        /* RIGHT SIDE */
+
+        .right {
+            width: 55%;
+
+            padding: 50px;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            color: #172033;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right h2 {
+            font-size: 32px;
+
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #718096;
+
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 17px;
+        }
+
+        label {
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+
+            color: #334155;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #d8dee8;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #0f7c90;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(15, 124, 144, 0.12);
+        }
+
+        .register-btn {
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f7c90,
+                    #135f8a
+                );
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            margin-top: 5px;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(15, 124, 144, 0.3);
+        }
+
+        .login-link {
+            text-align: center;
+
+            margin-top: 22px;
+
+            color: #718096;
+        }
+
+        .login-link a {
+            color: #0f7185;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 750px) {
+
+            .container {
+                width: 95%;
+
+                flex-direction: column;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                padding: 40px;
+            }
+
+            .right {
+                padding: 40px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT -->
+
+        <div class="left">
+
+            <div class="logo">
+                Secure<span>Bank</span>
+            </div>
+
+            <h1>
+                Create Your Account.
+            </h1>
+
+            <p>
+                Join SecureBank and experience a simple,
+                secure and modern way to manage your account.
+            </p>
+
+            <div class="benefits">
+
+                <div>✓ Simple account management</div>
+
+                <div>✓ Secure registration</div>
+
+                <div>✓ Easy access anytime</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="right">
+
+            <h2>Create Account</h2>
+
+            <p class="subtitle">
+                Enter your details to create your account.
+            </p>
+
+
+            <form action="insert" method="post">
+
+                <div class="input-group">
+
+                    <label>Bank Name</label>
+
+                    <input
+                        type="text"
+                        name="bankname"
+                        placeholder="Enter bank name"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Account Number</label>
+
+                    <input
+                        type="number"
+                        name="accountno"
+                        placeholder="Enter account number"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Account Name</label>
+
+                    <input
+                        type="text"
+                        name="accountname"
+                        placeholder="Enter account name"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="register-btn">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+
+            <div class="login-link">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Sign In
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
